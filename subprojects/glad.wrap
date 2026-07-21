@@ -1,0 +1,4 @@
+[wrap-git]
+url = https://github.com/Krak9n/glad_meson.git
+revision = HEAD
+depth = 1
