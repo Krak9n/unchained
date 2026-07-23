@@ -2,6 +2,7 @@ I was working on this cpp based game engine last year. Will be reviving in some 
 
 ### Dependencies
 * meson
+* ninja
 * clang
 
 ### Building
