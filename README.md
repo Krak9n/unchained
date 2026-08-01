@@ -6,6 +6,7 @@ This will be a Game of Life in it's active environment. To start evaluation you'
 * **cmake** >= 3.23
 * **freetype2**
 * **glfw3** 
+* **glad**
 
 ### Building
 ```bash

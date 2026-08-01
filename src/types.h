@@ -1,6 +1,6 @@
 #pragma once
-#ifndef HELP_H
-#define HELP_H
+#ifndef TYPES_H
+#define TYPES_H
 
 #include <vector>
 #include <stdint.h>
