@@ -20,7 +20,7 @@ set(SOURCES
 	src/pipeline/Video.cpp
 	src/text/TextRendering.cpp
 	src/window/window.cpp
-	src/ppm/img_s.cpp
+	src/screenshots/img_s.cpp
 )
 
 add_executable(${PROJECT_NAME}
