@@ -6,6 +6,8 @@
 #include <iostream>
 #include <filesystem>
 
+// later add the posibility to do screenshots inside of the game
+
 namespace SavesToImg {
   std::string filename();
   int8_t saves(); 

@@ -7,20 +7,20 @@ void input(wind *windows) {
   // i have keyd instance running for it being renamed. shit is fucked 
   // up and junky
   if (glfwGetKey(windows->window, GLFW_KEY_E) == GLFW_PRESS) { 
-    std::cout << "EXIT REQUESTED\n";
+    std::cout << "Exit requested.\n";
     glfwSetWindowShouldClose(windows->window, true);
   }
   if (glfwGetKey(windows->window, GLFW_KEY_SPACE) == GLFW_PRESS) { 
-    std::cout << "SPACE KEY PRESSED\n";
+    std::cout << "Space key pressed!\n";
   }
 
   if (glfwGetKey(windows->window, GLFW_KEY_PRINT_SCREEN) == GLFW_PRESS) {
-    std::cout << "screenshot of the state called\n";
+    std::cout << "Screenshot of the state called!\n";
     SavesToImg::save();
   }
 
   if (glfwGetMouseButton(windows->window, GLFW_MOUSE_BUTTON_LEFT) == GLFW_PRESS) {
-    std::cout << "pressed left mouse button\n";
+    std::cout << "Pressed left mouse button!\n";
     //changeColor();
     //do shit
   }
@@ -90,15 +90,15 @@ int creates(wind *windows) {
 
 
   if (initGLFW(windows) == -1) {
-    std::cout << "error while initializing glfw\n";
+    std::cout << "Error while initializing GLFW!\n";
     return -1;
   }
-  std::cout << "glfw passed\n";
+  std::cout << "GLFW stage passed!\n";
   if (initGLAD() == -1) {
-    std::cout << "error while initializing glad\n";
+    std::cout << "Error while initializing GLAD!\n";
     return -1;
   }
-  std::cout << "glad passed\n";
+  std::cout << "GLAD stage passed!\n";
 
   // getting current window size
   glfwGetWindowSize(

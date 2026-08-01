@@ -22,7 +22,7 @@ namespace SavesToImg {
   void save() {
     std::cout << filename();
     if (saves() == 1) {
-      std::cout << "saving to the img failed\n";
+      std::cout << "Saving to the img failed!\n";
       return;
     }
   }
