@@ -1,7 +1,7 @@
 #include "window.h"
 
 // i mean.. name speaks for itself
-void input(wind *windows) {
+void read_input(wind *windows) {
   // escape key aint getting picked up yet
   // fucking hell in my case it was actual escape even though
   // i have keyd instance running for it being renamed. shit is fucked 

@@ -21,7 +21,7 @@ typedef struct {
   bool fPressed;
 } wind;
 
-void input(wind *windows);
+void read_input(wind *windows);
 int initGLFW(wind *windows);
 int initGLAD();
 int creates(wind *windows);

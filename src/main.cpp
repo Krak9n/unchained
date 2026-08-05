@@ -30,8 +30,6 @@ int main() {
 	glEnable(GL_BLEND);
 	glBlendFunc(GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA);
 	Shader screenTEXT("shaders/text/TextVertex.glsl", "shaders/text/TextFragment.glsl");
-	Shader mains("shaders/world/Vertex.glsl", "shaders/world/Fragment.glsl");// fuck
-	//shader enironment();
 
 	glm::mat4 projection = glm::ortho(
 		0.0f, static_cast<float>(windows->width), 
@@ -49,7 +47,7 @@ int main() {
 	while(!glfwWindowShouldClose(windows->window)) { 
 		// function from above checks on each new loop if 
 		// the glfw has been instructed to be closed
-		input(windows);
+		read_input(windows);
 		//glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 		glfwGetWindowSize(
 			windows->window, 
@@ -60,9 +58,8 @@ int main() {
 			(uint)windows->height);
 
 		glClearColor(0.0f, 0.0f, 0.0f, 0.0f); 
-		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); // this will clear
-							// all previous frames
-							// generated
+		glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+
 		// update to the projection
 		projection = glm::ortho(
 			0.0f, static_cast<float>(windows->width), 
@@ -72,7 +69,6 @@ int main() {
 			screenTEXT.uniformLocation("projection"), 
 			1, GL_FALSE, glm::value_ptr(projection));
 
-		mains.use();
 		videoObjects.bindsVAO();
 		glDrawArrays(GL_TRIANGLES, 0, sizeOf);
 
@@ -81,16 +77,16 @@ int main() {
 			renderer,
 			glm::vec3(1.0f, 1.0f, 1.0f),
 			cursorPOSX(windows->window),
-			(float)(5),
-			(float)(windows->height - 35),
+			(float)(0),
+			(float)(windows->height - 25),
 			0.8f);
 		text.render(
 			screenTEXT,
 			renderer,
 			glm::vec3(1.0f, 1.0f, 1.0f),
 			cursorPOSY(windows->window),
-			(float)(5),
-			(float)(windows->height - 60),
+			(float)(0),
+			(float)(windows->height - 50),
 			0.8f);
 
 		glfwSwapBuffers(windows->window);
